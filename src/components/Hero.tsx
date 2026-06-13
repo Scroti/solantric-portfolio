@@ -58,20 +58,20 @@ export default function Hero() {
             <div style={{ overflow: 'hidden' }}>
               <span className="h-line-inner block text-white"
                 style={{ fontSize: 'clamp(4.5rem, 13vw, 11rem)', fontWeight: 700, lineHeight: 0.88, letterSpacing: '-0.02em' }}>
-                Cristian
+                We are
               </span>
             </div>
             <div style={{ overflow: 'hidden' }}>
               <span className="h-line-inner block"
                 style={{ fontSize: 'clamp(4.5rem, 13vw, 11rem)', fontWeight: 700, lineHeight: 0.88, letterSpacing: '-0.02em', color: 'var(--accent)' }}>
-                Mihalache.
+                Solantric.
               </span>
             </div>
           </div>
 
           <div className="h-sub mb-10 flex flex-wrap items-center gap-x-3 gap-y-1">
             <span className="font-mono text-sm tracking-[0.25em] text-white/30">
-              aka <span style={{ color: 'var(--accent)' }}>{profile.nickname}</span>
+              by <span style={{ color: 'var(--accent)' }}>{profile.nickname}</span> ({profile.name})
             </span>
             <span className="text-white/15">·</span>
             <span className="text-base text-white/35 md:text-[17px]">{t.hero.sub}</span>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import gsap from 'gsap'
 import { profile } from '@/data/cv'
 import { useLanguage } from '@/i18n/LanguageProvider'
@@ -34,8 +35,11 @@ export default function Navbar() {
       } : {}}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between">
-        <a href="#hero" className="font-mono text-sm font-semibold tracking-wider" style={{ color: 'var(--accent)' }}>
-          {profile.brand}
+        <a href="#hero" className="flex items-center gap-2">
+          <Image src="/logo-mark.png" alt="solantric" width={268} height={430} priority className="h-6 w-auto" />
+          <span className="font-mono text-sm font-semibold tracking-wider" style={{ color: 'var(--accent)' }}>
+            {profile.brand}
+          </span>
         </a>
 
         <nav className="flex items-center gap-6">
