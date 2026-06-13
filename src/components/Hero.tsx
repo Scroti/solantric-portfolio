@@ -69,13 +69,9 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="h-sub mb-10 flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span className="font-mono text-sm tracking-[0.25em] text-white/30">
-              by <span style={{ color: 'var(--accent)' }}>{profile.nickname}</span> ({profile.name})
-            </span>
-            <span className="text-white/15">·</span>
-            <span className="text-base text-white/35 md:text-[17px]">{t.hero.sub}</span>
-          </div>
+          <p className="h-sub mb-10 max-w-xl text-base text-white/45 md:text-lg">
+            {t.hero.sub}
+          </p>
 
           <div className="flex flex-wrap items-center gap-3">
             <a href="#projects"

@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       label: 'Web Development & Design',
-      sub: 'Full-Stack Developer & Designer',
+      sub: 'Proiectăm și construim aplicații web și produse digitale moderne.',
       btnProjects: 'Proiecte →',
       btnContact: 'Contact',
       btnCall: 'sau programează un call',
@@ -82,7 +82,7 @@ export const translations = {
     },
     hero: {
       label: 'Web Development & Design',
-      sub: 'Full-Stack Developer & Designer',
+      sub: 'We design and build modern web apps and digital products.',
       btnProjects: 'Projects →',
       btnContact: 'Contact',
       btnCall: 'or book a call',

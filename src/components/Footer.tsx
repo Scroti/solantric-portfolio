@@ -5,12 +5,17 @@ export default function Footer() {
   return (
     <footer className="px-6 py-8 md:px-10 lg:px-16" style={{ borderTop: '1px solid var(--border)' }}>
       <div className="mx-auto flex max-w-6xl items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Image src="/logo-mark.png" alt="solantric" width={268} height={430} className="h-5 w-auto" />
-          <span className="font-mono text-sm font-semibold" style={{ color: 'var(--accent)' }}>
-            {profile.brand}
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center gap-2">
+            <Image src="/logo-mark.png" alt="solantric" width={268} height={430} className="h-5 w-auto" />
+            <span className="font-mono text-sm font-semibold" style={{ color: 'var(--accent)' }}>
+              {profile.brand}
+            </span>
+            <span className="text-xs text-white/15">· © {new Date().getFullYear()}</span>
+          </div>
+          <span className="text-xs text-white/25">
+            also known as <span style={{ color: 'var(--accent)' }}>{profile.nickname}</span> ({profile.name})
           </span>
-          <span className="text-xs text-white/15">· © {new Date().getFullYear()}</span>
         </div>
         <div className="flex gap-6">
           {[

@@ -88,3 +88,6 @@ body::after {
   will-change: transform;
 }
 .marquee-track:hover { animation-play-state: paused; }
+
+/* reset the site's custom cursor inside Sanity Studio */
+.studio-host, .studio-host * { cursor: auto !important; }
