@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="mx-auto w-full max-w-6xl">
 
           <p className="h-label mb-8 font-mono text-xs uppercase tracking-[0.3em] text-white/22">
-            {profile.brand} · {t.hero.label}
+            {t.hero.label}
           </p>
 
           <div className="mb-8 select-none">
@@ -69,9 +69,13 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="h-sub mb-10 text-base text-white/35 md:text-[17px]" style={{ maxWidth: '400px' }}>
-            {t.hero.sub}
-          </p>
+          <div className="h-sub mb-10 flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span className="font-mono text-sm tracking-[0.25em] text-white/30">
+              aka <span style={{ color: 'var(--accent)' }}>{profile.nickname}</span>
+            </span>
+            <span className="text-white/15">·</span>
+            <span className="text-base text-white/35 md:text-[17px]">{t.hero.sub}</span>
+          </div>
 
           <div className="flex flex-wrap items-center gap-3">
             <a href="#projects"

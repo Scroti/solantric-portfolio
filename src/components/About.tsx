@@ -33,7 +33,7 @@ export default function About() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="about" className="relative px-6 py-36 md:px-10 lg:px-16">
+    <section ref={sectionRef} id="about" className="relative px-6 py-20 md:px-10 md:py-24 lg:px-16">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px"
         style={{ background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent)' }} />
 

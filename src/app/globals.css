@@ -57,6 +57,25 @@ body::after {
   animation: pulse-ring 2s ease-out infinite;
 }
 
+/* modal */
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes modal-pop-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-fade { animation: modal-fade-in 0.25s ease-out both; }
+.modal-pop  { animation: modal-pop-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* rotating project cards */
+@keyframes card-rotate-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card-rotate { animation: card-rotate-in 0.5s ease-out both; }
+
 /* marquee */
 @keyframes marquee {
   from { transform: translateX(0); }

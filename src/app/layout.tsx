@@ -7,8 +7,8 @@ import './globals.css'
 const geist = Geist({ variable: '--font-geist', subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Solantric — Dev & Design',
-  description: 'Portfolio creativ — web development & design',
+  title: 'Solantric | Web Development & Design',
+  description: 'Portfolio web development & design',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

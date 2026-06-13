@@ -47,7 +47,7 @@ export default function Contact() {
   })
 
   return (
-    <section ref={sectionRef} id="contact" className="relative px-6 py-36 md:px-10 lg:px-16" style={{ overflow: 'hidden' }}>
+    <section ref={sectionRef} id="contact" className="relative px-6 py-20 md:px-10 md:py-24 lg:px-16" style={{ overflow: 'hidden' }}>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px"
         style={{ background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent)' }} />
       <div className="pointer-events-none absolute -left-48 top-1/2 -translate-y-1/2 rounded-full"
