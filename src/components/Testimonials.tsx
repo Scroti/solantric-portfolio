@@ -44,14 +44,13 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
             const role = locale === 'ro' ? item.roleRo : item.roleEn
             return (
               <figure key={i}
-                className="mr-4 flex h-[210px] w-[300px] shrink-0 flex-col rounded-2xl border p-6 sm:w-[360px]"
+                className="mr-4 flex min-h-[210px] w-[300px] shrink-0 flex-col rounded-2xl border p-6 sm:w-[360px]"
                 style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}>
                 <span aria-hidden className="mb-2 font-serif text-4xl leading-none"
                   style={{ color: 'var(--accent)', opacity: 0.5 }}>
                   &ldquo;
                 </span>
-                <blockquote className="flex-1 overflow-hidden text-[15px] leading-[1.65] text-white/60"
-                  style={{ display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical' }}>
+                <blockquote className="flex-1 text-[15px] leading-[1.6] text-white/60">
                   {quote}
                 </blockquote>
                 <figcaption className="mt-5 flex items-center gap-3">
