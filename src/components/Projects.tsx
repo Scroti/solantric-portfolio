@@ -56,11 +56,21 @@ export default function Projects({ projects }: { projects: ProjectCard[] }) {
         onMouseEnter={(e) => (e.currentTarget.style.borderColor = `${p.accent}55`)}
         onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}>
 
-        <span aria-hidden
-          className="pointer-events-none absolute -right-2 -top-3 select-none font-bold capitalize leading-none tracking-tight"
-          style={{ fontSize: big ? '4.5rem' : '3rem', color: p.accent, opacity: 0.07 }}>
-          {p.name}
-        </span>
+        {p.imageUrl ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`${p.imageUrl}?w=900&h=700&fit=crop&auto=format`} alt={p.name}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute inset-0"
+              style={{ background: 'linear-gradient(180deg, rgba(6,6,6,0.12) 0%, rgba(6,6,6,0.5) 55%, rgba(6,6,6,0.93) 100%)' }} />
+          </>
+        ) : (
+          <span aria-hidden
+            className="pointer-events-none absolute -right-2 -top-3 select-none font-bold capitalize leading-none tracking-tight"
+            style={{ fontSize: big ? '4.5rem' : '3rem', color: p.accent, opacity: 0.07 }}>
+            {p.name}
+          </span>
+        )}
 
         <div className="absolute left-5 right-5 top-5 flex items-center justify-between">
           <span className="flex items-center gap-2 font-mono text-xs text-white/22">
