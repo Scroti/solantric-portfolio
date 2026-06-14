@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-1 items-center px-6 pt-24 pb-10 md:px-10 lg:px-16">
         <div className="mx-auto w-full max-w-6xl">
 
-          <p className="h-label mb-8 font-mono text-xs uppercase tracking-[0.3em] text-white/22">
+          <p className="h-label mb-8 font-mono text-xs uppercase tracking-[0.3em] text-white/45">
             {t.hero.label}
           </p>
 
@@ -69,7 +69,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="h-sub mb-10 max-w-xl text-base text-white/45 md:text-lg">
+          <p className="h-sub mb-10 max-w-xl text-base text-white/65 md:text-lg">
             {t.hero.sub}
           </p>
 
@@ -80,11 +80,11 @@ export default function Hero() {
               {t.hero.btnProjects}
             </a>
             <a href="#contact"
-              className="h-btn rounded-full border border-white/10 px-7 py-3 text-sm font-medium text-white/50 transition-all hover:border-white/20 hover:text-white/80 active:scale-95">
+              className="h-btn rounded-full border border-white/15 px-7 py-3 text-sm font-medium text-white/75 transition-all hover:border-white/30 hover:text-white active:scale-95">
               {t.hero.btnContact}
             </a>
             <a href={profile.calCom} target="_blank" rel="noopener noreferrer"
-              className="h-btn text-sm text-white/20 underline underline-offset-4 transition-colors hover:text-white/55">
+              className="h-btn text-sm text-white/40 underline underline-offset-4 transition-colors hover:text-white/75">
               {t.hero.btnCall}
             </a>
           </div>

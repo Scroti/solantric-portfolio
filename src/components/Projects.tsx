@@ -56,20 +56,14 @@ export default function Projects({ projects }: { projects: ProjectCard[] }) {
         onMouseEnter={(e) => (e.currentTarget.style.borderColor = `${p.accent}55`)}
         onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--border)')}>
 
-        {p.imageUrl ? (
+        {p.imageUrl && (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={`${p.imageUrl}?w=900&h=700&fit=crop&auto=format`} alt={p.name}
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0"
-              style={{ background: 'linear-gradient(180deg, rgba(6,6,6,0.12) 0%, rgba(6,6,6,0.5) 55%, rgba(6,6,6,0.93) 100%)' }} />
+              style={{ background: 'linear-gradient(180deg, rgba(6,6,6,0.05) 0%, rgba(6,6,6,0.30) 55%, rgba(6,6,6,0.75) 100%)' }} />
           </>
-        ) : (
-          <span aria-hidden
-            className="pointer-events-none absolute -right-2 -top-3 select-none font-bold capitalize leading-none tracking-tight"
-            style={{ fontSize: big ? '4.5rem' : '3rem', color: p.accent, opacity: 0.07 }}>
-            {p.name}
-          </span>
         )}
 
         <div className="absolute left-5 right-5 top-5 flex items-center justify-between">
@@ -82,15 +76,15 @@ export default function Projects({ projects }: { projects: ProjectCard[] }) {
           </span>
         </div>
 
-        <div className="relative">
+        <div className="relative rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-md">
           <h3 className={`font-semibold capitalize text-white ${big ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'}`}>{p.name}</h3>
-          {desc && <p className={`mt-1 leading-relaxed text-white/35 ${big ? 'text-[15px]' : 'text-sm'}`}>{desc}</p>}
+          {desc && <p className={`mt-1 leading-relaxed text-white/65 ${big ? 'text-[15px]' : 'text-sm'}`}>{desc}</p>}
           {p.tags?.length > 0 && (
             <div className="mt-3 flex flex-wrap gap-1.5">
               {p.tags.map((tag) => (
                 <span key={tag}
-                  className="rounded-full border px-2.5 py-0.5 font-mono text-[10px] text-white/25"
-                  style={{ borderColor: 'var(--border)' }}>
+                  className="rounded-full border px-2.5 py-0.5 font-mono text-[10px] text-white/45"
+                  style={{ borderColor: 'rgba(255,255,255,0.12)', background: 'rgba(0,0,0,0.25)' }}>
                   {tag}
                 </span>
               ))}
