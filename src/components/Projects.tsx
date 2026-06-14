@@ -62,7 +62,7 @@ export default function Projects({ projects }: { projects: ProjectCard[] }) {
             <img src={`${p.imageUrl}?w=900&h=700&fit=crop&auto=format`} alt={p.name}
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0"
-              style={{ background: 'linear-gradient(180deg, rgba(6,6,6,0.05) 0%, rgba(6,6,6,0.30) 55%, rgba(6,6,6,0.75) 100%)' }} />
+              style={{ background: 'linear-gradient(180deg, rgba(6,6,6,0.05) 0%, rgba(6,6,6,0.40) 55%, rgba(6,6,6,0.92) 100%)' }} />
           </>
         )}
 
@@ -76,7 +76,7 @@ export default function Projects({ projects }: { projects: ProjectCard[] }) {
           </span>
         </div>
 
-        <div className="relative rounded-xl border border-white/10 bg-black/40 p-4 backdrop-blur-md">
+        <div className="relative">
           <h3 className={`font-semibold capitalize text-white ${big ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'}`}>{p.name}</h3>
           {desc && <p className={`mt-1 leading-relaxed text-white/65 ${big ? 'text-[15px]' : 'text-sm'}`}>{desc}</p>}
           {p.tags?.length > 0 && (
